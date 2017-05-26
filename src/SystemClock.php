@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Lcobucci\Clock;
 
 use DateTimeImmutable;
@@ -19,7 +17,7 @@ final class SystemClock implements Clock
         $this->timezone = $timezone ?: new DateTimeZone(date_default_timezone_get());
     }
 
-    public function now(): DateTimeImmutable
+    public function now()
     {
         return new DateTimeImmutable('now', $this->timezone);
     }

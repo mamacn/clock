@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Lcobucci\Clock;
 
 use DateTimeImmutable;
@@ -18,7 +16,7 @@ final class FrozenClock implements Clock
         $this->now = $now;
     }
 
-    public function now(): DateTimeImmutable
+    public function now()
     {
         return $this->now;
     }
